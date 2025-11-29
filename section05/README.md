@@ -1,12 +1,9 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Section 05
+    - useState
+        useState는 상태관리 Hook이다. Hook이란 React에서 만들어진 useState, useRef, useEffect 같은 기능들을 의미하는 것 같다.
+        js를 처음 공부할 때 jqeury를 짝꿍처럼 배워왔고, 생각했다. jquery를 처음 쓰면서 정말 사용하기 편하도록 만들어졌다고 생각을 했는데
+        React를 공부하니 정말 선배 개발자들이 개발을 어떻게 더 쉽고 편하게 할지 고민 했는지 알 수 있었다. useState는 간단하게 배열 형태의 데이터를 반환하는데,
+        첫 인덱스 값은 해당 값을 두 번째 인덱스 값은 값을 변경할 수 있는 함수를 반환한다.
+        
+        심지어 state의 값이 변경되면 해당 컴포넌트를 리랜더링한다 !!! 엄청나지 않은가 !! 만약 순수 js나 jquery를 활용하여 해당 기능을 구현한다면 
+        매우 귀찮고 복잡한 일이 될 것이다. 리액트는 개발자가 오로지 비즈니스 로직에 신경 쓰도록 도와주는 고마운 존재이다.
