@@ -9,7 +9,7 @@ const Register = () => {
     const [name, setName] = useState('철수');
     const [birth, setBirth] = useState('');
     const [country, setCountry] = useState('');
-    const [bio, setBio] = useState('');
+    const [bio, setBio] = useState("");
 
     const onChangeName = (e) => {
         console.log(e)
