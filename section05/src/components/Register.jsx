@@ -6,34 +6,42 @@ import { useState } from 'react';
 // 4. 자기소개
 
 const Register = () => {
-    const [name, setName] = useState('철수');
-    const [birth, setBirth] = useState('');
-    const [country, setCountry] = useState('');
-    const [bio, setBio] = useState("");
+    const [input, setInput] = useState({
+        name: "",
+        birth: "",
+        country: "",
+        bio: "",
+    })
+    console.log(input)
 
-    const onChangeName = (e) => {
-        console.log(e)
+    const onChange = (e) => {
+        setInput({
+            ...input,
+            [e.target.name]: e.target.value
+        })
     }
 
     return (
         <div>
             <div>
             <input 
-                onChange={(e) => setName(e.target.value)} 
+                name='name'
+                onChange={onChange} 
                 placeholder={'이름'}
-                value={name}></input>
-            <div>{name}</div>
+                value={input.name}></input>
+            <div>{input.name}</div>
             </div>
             <div>
             <input 
+                name='birth'
                 type='date'
-                onChange={(e) => setBirth(e.target.value)}  
-                value={birth}
+                onChange={onChange}  
+                value={input.birth}
             />
-            <div>{birth}</div>
+            <div>{input.birth}</div>
             </div>
             <div>
-                <select value={country} onChange={(e)=>{setCountry(e.target.value)}}>
+                <select value={input.country} onChange={onChange} name='country'>
                     <option value={''}>선택해주세요</option>
                     <option value={'kor'}>한국</option>
                     <option value={'usa'}>미국</option>
@@ -41,17 +49,18 @@ const Register = () => {
             
             </div>
             <div>
-                {country}
+                {input.country}
             </div>
             <div>
             <textarea 
-                value={bio}
+                name='bio'
+                value={input.bio}
                 placeholder={'자기소개'}
-                onChange={(e)=>{setBio(e.target.value)}}
+                onChange={onChange}
             />
             </div>
             <div>
-                {bio}
+                {input.bio}
             </div>
         </div>
     )
