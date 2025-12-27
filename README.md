@@ -19,3 +19,11 @@
   ㅁ state 랜더링
   setate 가 set으로 상태가 변경되면 해당 컴포넌트가 다시 랜더링 된다. 
   set() 호출 - 컴포넌트 함수 다시 실행 - jsx 다시 생성 - virtual dom 생성 - diff만 교체 후 반영
+
+2. useRef
+  userReference 의 줄임말로 reference 객체를 생성하는 기능. 컴포넌트 변수로 일반적인 값들을 저장할 수 있다.
+  useState와의 차이로는 어떤 경우에도 리랜더링이 발생하지 않는다. 특정 DOM 요소에 접근하여 해당 element를 조작하는 작업이 가능하다. ex) foucs !
+
+  useRef는 변수를 담을 수 있기 때문에 보통 유효성 검사에 많이 쓰인다. input에 ref 속성으로 useRef를 할당하고, 
+
+  useRef는 일반 변수와 비슷하지만 useRef를 쓰는 이유는 컴포넌트 리랜더링 시 컴포넌트가 다시 생성되면서 일반 변수는 계속 초기화 되기 때문에 useRef를 사용하는 것이다.
